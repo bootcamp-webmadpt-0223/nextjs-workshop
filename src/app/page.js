@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -9,7 +10,9 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.js</code>
         </p>
-        <div>
+        <div style={{
+          marginTop: "24px"
+        }}>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
@@ -89,6 +92,12 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
+        <Link href="/dashboard">
+          Go to dashboard
+        </Link>
+        <Link href="/dashboard/user">
+          Go to user dashboard
+        </Link>
       </div>
     </main>
   )
